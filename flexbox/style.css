@@ -1,0 +1,52 @@
+body {
+  margin: 10px;
+  font-family: Verdana;
+}
+
+/* flex container */
+nav {
+  height: 200px;
+  border: 5px solid #aaa;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* aligns items off the base line of text regardless of font size */
+  /* align-items: baseline; */
+
+  align-items: flex-start;
+
+  /* flex start is the default justify content value */
+  /* justify-content: space-evenly; */
+}
+
+nav div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+  min-width: 250px;
+
+  /* evenly distributes width between elements */
+  flex: 1;
+}
+
+/* each direct child is a flex item */
+/* cross axis is perpendicular i.e. if flex direction row then cross axis is column */
+nav div:nth-child(1) {
+  background-color: #84b0f8;
+  order: 3;
+}
+
+nav div:nth-child(2) {
+  background-color: #f2857c;
+
+  /* everything has a default of order 0, changing order to one makes that thing now last */
+  order: 1;
+
+  /* moves item to other side of page */
+  /* margin-left: auto; */
+}
+
+nav div:nth-child(3) {
+  background-color: #fcd35d;
+  order: 2;
+}
